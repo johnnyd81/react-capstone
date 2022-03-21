@@ -1,13 +1,138 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0; /* this declaration removes the default margin and padding */
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  /* this declaration sets an image for the background of the app */
+  background-image: url('https://i.imgur.com/2R6FSTE.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  /*the cards are layed out appropriately using flexbox */
+  height: 600px;
+  width: 700px;
+  margin-left: 25%;
+  margin-bottom: 60px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.heading {
+  font-size: 2.4rem;
+  text-align: center;
+  color: orangered;
+  text-shadow: 2px 2px gold;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.card-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  /* the cards are animated and their transitions set using the declarations below */
+  transform: scale(0);
+  animation: 2s hideImage linear;
+  transition: transform 0.5s;
+}
+
+.card {
+  background-image: url('https://i.pinimg.com/originals/8e/85/d9/8e85d9446961086853d8f6b7821f44d4.jpg');
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg); /* flips each card */
+  animation: 2s hideItem linear;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  transition: transform 0.5s;
+}
+
+@keyframes hideItem {
+  0%,
+  70% {
+    /*causes the flip effect by allowing a 180 degree turn on the y-axis */
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes hideImage {
+  0%,
+  70% {
+    /*this declaration hides the image by changing it's scale to 0 thereby hiding it*/
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.card.active {
+  transform: rotateY(0);
+}
+
+.card.active img {
+  /*when a card is active it's scale is 1 and fully visible */
+  transform: scale(1);
+}
+
+.start {
+  font-size: 1.6rem;
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 800;
+  font-style: italic;
+  margin-left: 43%;
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+.modalContainer {
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 900px;
+  border-radius: 10px;
+}
+
+.header {
+  font-style: italic;
+}
+
+.body {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.footer button {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: white;
+  padding: 5px;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+.modalButton {
+  margin-left: 47%;
+  margin-bottom: 15px;
+  color: white;
+  font-style: italic;
+  font-size: 1.6rem;
+  background-color: red;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 800;
 }

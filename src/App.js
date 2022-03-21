@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Header from './Components/Header'
+import MemoryGame from './Components/MemoryGame'
+import Restart from './Components/Restart'
+import Modal from './Components/Modal'
+import './index.css'
 
 function App() {
+  //the state of the modal is declared here
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(true)
+  }
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <MemoryGame />
+      {showModal && <Modal closeModal={closeModal} />}
+      <Restart />
+      <button className="modalButton" onClick={openModal}>
+        Help
+      </button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
