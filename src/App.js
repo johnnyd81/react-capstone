@@ -8,7 +8,7 @@ import './index.css'
 function App() {
   //the state of the modal is declared here
   const [showModal, setShowModal] = useState(false)
-
+  //the two functions below control the opening and closing of the modal
   const openModal = () => {
     setShowModal(true)
   }
