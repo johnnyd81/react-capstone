@@ -2,7 +2,7 @@
 
 The game is played by flipping a card and trying to find it's mate amongst the other overturned cards. Each card only has one match.
 The player wins the game when all the cards are matched up. There are two buttons the user can use, one to restart the game and a 
-help button that gives simple rules.
+help button that gives simple rules. When the game restarts the order of the cards are re-shuffled to always offer a fresh challenge.
 
 ![image](https://user-images.githubusercontent.com/95863021/159277349-d75ea5ac-04f2-4e9c-a88a-e829d97afea4.png)
 
