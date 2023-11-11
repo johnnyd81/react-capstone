@@ -13,6 +13,7 @@ function App() {
     setShowModal(true)
   }
 
+  //function to close the modal
   const closeModal = () => {
     setShowModal(false)
   }
