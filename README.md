@@ -1,6 +1,6 @@
 # Medieval Memory Card Game
 
-The game is played by flipping a card and trying to find it's match amongst the other overturned cards. Each card only has one match.
+The game is played by flipping a card and trying to find it's match amongst the other cards on the board. Each card only has one match.
 The player wins the game when all the cards are matched up. There are two buttons the user can use, one to restart the game and a 
 help button that gives simple rules. When the game restarts the order of the cards are re-shuffled to always offer a fresh challenge.
 The app was built using react.js
