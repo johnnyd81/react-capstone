@@ -1,8 +1,7 @@
 import React from 'react'
 import '../index.css'
 
-//the modal component contains the rules for the game and appears when the help button is clicked
-
+//the Modal component contains the rules for the game and appears when the help button is clicked
 const Modal = ({ closeModal }) => {
   return (
     <div className="modalContainer">
