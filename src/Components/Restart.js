@@ -1,5 +1,6 @@
 import React from 'react'
 
+//the Restart component refreshes the webpage which restarts the game
 const Restart = () => {
   return (
     <div>
