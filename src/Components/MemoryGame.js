@@ -3,7 +3,7 @@ import MemoryItem from './MemoryItem'
 import '../index.css'
 
 const MemoryGame = () => {
-  //the card choices are stored in an array in the choices variable
+  //the card choices are stored in an array in the choices variable which is the initial state
   const [choices, setChoices] = useState(
     [
       { id: 1, src: require('../Images/pic1.jpeg'), phase: '' },
