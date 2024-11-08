@@ -1,7 +1,7 @@
 import React from "react";
 import "../index.css";
 
-//Header component that contains the app heading
+//Header component that contains the app heading written in an italic font
 const Header = () => {
   return (
     <div>
