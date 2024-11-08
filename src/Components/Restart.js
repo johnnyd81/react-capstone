@@ -1,6 +1,6 @@
 import React from "react";
 
-//the Restart component refreshes the webpage which restarts the game
+//the Restart component refreshes the webpage which restarts the game by reshuffling the cards
 const Restart = () => {
   return (
     <div>
